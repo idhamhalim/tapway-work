@@ -1,0 +1,6 @@
+#bash script for converting batch .dav video into .mp4
+
+for i in *.dav ; do 
+    ffmpeg -i "$i" -acodec libx264 $(basename "${i/.dav}").mp4 
+    sleep 60 
+done
